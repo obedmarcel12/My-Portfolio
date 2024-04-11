@@ -282,6 +282,68 @@
     </footer>
   </body>
 </html>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-left {
+    animation: slideInFromLeft 1s ease-out forwards;
+  }
+
+  .hover {
+    animation: turn 2.5s ease infinite;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  .button-butt {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  @keyframes turn {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+</style>
 <!--  -->
 <script>
   function Menu(e) {
