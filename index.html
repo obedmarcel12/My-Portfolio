@@ -434,27 +434,10 @@
       <!--  -->
       <div class="md:h-[20vh] h-[10vh]"></div>
       <nav class="container">
-        <form id="contactForm" action="submit.php" method="POST">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your Name"
-            required
-          />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Your Email"
-            required
-          />
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Your Message"
-            required
-          ></textarea>
+        <form class="contact_Form" action="#" method="POST">
+          <input type="text" class="name" placeholder="Your Name" required />
+          <input type="email" class="email" placeholder="Your Email" required />
+          <textarea class="msg" placeholder="Your Message" required></textarea>
           <button class="button-butt" type="submit">Send Message</button>
         </form>
       </nav>
@@ -532,6 +515,8 @@
         <h4>©Copyright @ 2024 OBETECH</h4>
       </section>
     </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
 
@@ -612,30 +597,37 @@
     }
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contactForm')
-
-    form.addEventListener('submit', function (event) {
-      event.preventDefault()
-
-      // Client-side validation
-      const name = document.getElementById('name').value.trim()
-      const email = document.getElementById('email').value.trim()
-      const message = document.getElementById('message').value.trim()
-
-      if (name === '' || email === '' || message === '') {
-        alert('Please fill out all fields.')
-        return
-      }
-
-      // Submit form if validation passes
-      this.submit()
-    })
-  })
-  //
-
   const click = document.getElementById('click')
   click.addEventListener('click', () => {
     document.location.pathname = 'about.html'
   })
+  //
+
+  const form = document.querySelector('.contact_Form')
+
+  function sendMsg(e) {
+    e.preventDefault()
+
+    const name = document.querySelector('.name').value,
+      email = document.querySelector('.email').value,
+      message = document.querySelector('.msg').value
+
+    Email.send({
+      SecureToken: '77849e42-83be-40c2-8f41-55ee6dd2904e',
+      To: 'arinzegodfrey376@gmail.com',
+      From: email,
+      Subject: 'Contact Form',
+      Body: message,
+    }).then((message) => alert(message))
+
+    Email.send({
+      SecureToken: '77849e42-83be-40c2-8f41-55ee6dd2904e',
+      Host: 'smtp.elasticemail.com', // Replace 'example.com' with your SMTP server hostname
+      Username: 'arinzegodfrey376@gmail.com',
+      Password: 'smtp.elasticemail.com',
+      // Other email options...
+    })
+  }
+
+  form.addEventListener('submit', sendMsg)
 </script>
