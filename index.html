@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-
+    <link rel="shortcut icon" href="src/Obed-logo.jpg" />
     <link rel="stylesheet" href="src/output.css" />
     <link
       rel="stylesheet"
@@ -27,25 +27,27 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
-    <link rel="stylesheet" href="submit.php" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </head>
   <body class="bg-cyan-950">
     <header
       id="Home"
-      class="w-[100%] h-[25vh] flex items-center justify-between px-[80px]"
+      class="w-[100%] h-[25vh] shadow-2xl flex items-center justify-between px-[80px]"
     >
       <!--  -->
       <nav class="flex items-center gap-[1.6cm]">
-        <strong class="sm: hidden md:block">
+        <div class="hidden md:flex">
           <img
             src="src/Obed-logo-removebg-preview.png"
             class="inline h-[18vh] w-[10vw]"
             alt=""
           />
-        </strong>
+        </div>
         <!--  -->
 
-        <strong class="md:flex gap-5 font-sans font-medium sm: hidden">
+        <div
+          class="md:flex gap-5 font-sans text-lg font-semibold text-pretty hidden"
+        >
           <a href="#Home" class="text-white hover:text-[goldenrod]">Home</a>
           <a href="#about" class="text-white hover:text-[goldenrod]">About</a>
           <a href="#Services" class="text-white hover:text-[goldenrod]"
@@ -54,27 +56,27 @@
           <a href="#ContactMe" class="text-white hover:text-[goldenrod]"
             >Contact</a
           >
-        </strong>
+        </div>
       </nav>
       <!--  -->
-      <strong
-        class="w-[17vw] h-[10vh] sm: opacity-0 md:opacity-100 flex items-center text-[#fff] justify-center rounded-[5px] bg-[#ff9d00] font-semibold font-sans"
+      <div
+        class="w-[17vw] h-[10vh] opacity-0 md:opacity-100 flex items-center text-[#fff] justify-center rounded-[5px] bg-[#ff9d00] font-semibold font-sans"
       >
         <a href="contact.html">Lets Work Together</a>
-      </strong>
+      </div>
     </header>
     <!--  -->
     <!-- phone view -->
     <div
       class="md:hidden border-b-[1px] pb-4 border-[gray] flex items-center justify-between px-[30px] absolute bottom-[15cm] w-[100%] h-[10vh]"
     >
-      <strong>
+      <div>
         <img
           src="src/Obed-logo-removebg-preview.png"
           class="inline h-[20vh] w-[25vw]"
           alt=""
         />
-      </strong>
+      </div>
       <!--  -->
       <span class="text-5xl cursor-pointer md:hidden text-[goldenrod]">
         <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
@@ -84,7 +86,7 @@
     <!--phone-view-end  -->
 
     <ul
-      class="sm: flex sm: flex-col font-sans bg-cyan-950 text-[3vh] absolute opacity-100 md:opacity-0 w-full py-4 z-[1] pl-7 top-[-400px] transition-all ease-in-out duration-500 gap-[1.5cm] font-medium"
+      class="flex flex-col font-sans bg-cyan-950 text-[3vh] absolute opacity-100 md:opacity-0 w-full py-4 z-[1] pl-7 top-[-400px] transition-all ease-in-out duration-500 gap-[1.5cm] font-medium"
     >
       <nav class="flex gap-4 flex-col">
         <a
@@ -110,11 +112,11 @@
       </nav>
       <!--  -->
       <nav>
-        <strong
-          class="sm: w-[85vw] sm: h-[10vh] md:opacity-100 flex items-center text-[#363535] justify-center rounded-[5px] bg-[#ff9d00] font-medium font-sans"
+        <div
+          class="w-[85vw] h-[10vh] md:opacity-100 flex items-center text-[#363535] justify-center rounded-[5px] bg-[#ff9d00] font-medium font-sans"
         >
           <a href="contact.html">Lets Work Together</a>
-        </strong>
+        </div>
       </nav>
     </ul>
     <!--  -->
@@ -128,9 +130,9 @@
     >
       <div class="md:flex md:flex-col text-white">
         <h2
-          class="font-medium md:text-[4vh] sm: text-[2vh] font-sans text-gray-100 md:font-serif animate-left"
+          class="font-medium md:text-[4vh] text-[2vh] font-sans text-gray-100 md:font-serif animate-left"
         >
-          Hello, I'm Obed Arinze Godfrey CEO of OBE<span class="text-[#ff9d00]"
+          Hello, I'm Godfrey Obed Arinze CEO of OBE<span class="text-[#ff9d00]"
             >TECH</span
           >
         </h2>
@@ -153,10 +155,10 @@
         </a>
       </div>
       <!--  -->
-      <div>
+      <div class="border-[10px]">
         <img
-          src="src/obedmarcel.jpg"
-          class="md:w-[27vw] md:h-[60vh] w-[100vw] h-[40vh] rounded-[10px]"
+          src="src/obed-neew.jpg"
+          class="md:w-[40vw] md:h-[60vh] w-[100vw] h-[40vh] rounded-[10px]"
           alt=""
         />
       </div>
@@ -298,10 +300,10 @@
       </nav>
       <!--  -->
       <nav
-        class="md:flex md:flex-row items-center flex flex-col md:gap-0 gap-[10vh] justify-between md:px-[80px] px-[20px] md:pb-[6cm] pb-[3cm]"
+        class="md:flex md:flex-row flex flex-col md:gap-0 gap-[10vh] justify-between md:px-[80px] px-[20px] md:pb-[6cm] pb-[3cm]"
       >
         <div
-          class="md:flex md:flex-col flex flex-col items-center justify-center md:gap-4 gap-7"
+          class="md:flex md:flex-col flex flex-col items-start justify-center md:gap-4 gap-7"
         >
           <ul
             class="md:flex md:flex-row items-center hover:opacity-70 md:gap-3 flex flex-col gap-4"
@@ -343,13 +345,21 @@
               alt=""
             />
           </ul>
+
+          <ul>
+            <img
+              src="src/nextjs.jpeg"
+              class="md:w-[13vw] md:h-[13vw] w-[100vw] h-[30vh] border-[2px]"
+              alt=""
+            />
+          </ul>
         </div>
         <!--  -->
 
-        <div>
+        <div class="hover:opacity-60">
           <img
             src="src/laptop-3.jpg"
-            class="inline md:w-[40vw] md:h-[60vh] w-[100vw] h-[50vh] rounded-[5px]"
+            class="inline md:w-[40vw] md:h-[60vh] w-[100vw] h-[50vh]"
             alt=""
           />
         </div>
@@ -434,14 +444,99 @@
       </nav>
       <!--  -->
       <div class="md:h-[20vh] h-[10vh]"></div>
-      <nav class="container">
-        <form class="contact_Form" action="#" method="POST">
-          <input type="text" class="name" placeholder="Your Name" required />
-          <input type="email" class="email" placeholder="Your Email" required />
-          <textarea class="msg" placeholder="Your Message" required></textarea>
-          <button class="button-butt" type="submit">Send Message</button>
-        </form>
-      </nav>
+
+      <!--  -->
+      <div class="container mx-auto py-10">
+        <div class="bg-white p-5 rounded-md shadow-md">
+          <h2
+            class="text-2xl text-cyan-950 font-semibold text-center font-serif mb-5"
+          >
+            Contact Us
+          </h2>
+          <form id="contactForm" class="space-y-4 pb-6 text-cyan-950">
+            <div>
+              <label for="name" class="block font-serif text-2xl">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input w-full border-[1px] border-[gray]"
+                required
+              />
+            </div>
+            <div>
+              <label for="email" class="block font-serif text-2xl">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input w-full border-[1px] border-[gray]"
+                required
+              />
+            </div>
+            <div>
+              <label for="message" class="block font-serif text-2xl"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="form-textarea w-full border-[1px] border-[gray]"
+                required
+              ></textarea>
+            </div>
+            <!--  -->
+            <div class="w-full pt-6 flex items-end">
+              <button
+                type="submit"
+                class="bg-cyan-950 text-white px-4 rounded-md hover:bg-blue-600"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Email.js library -->
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+      <!--  -->
+      <script>
+        ;(function () {
+          emailjs.init('obedmarcel') // Replace with your Email.js user ID
+        })()
+      </script>
+      <!-- JavaScript code to handle form submission and email sending -->
+      <script>
+        document
+          .getElementById('contactForm')
+          .addEventListener('submit', function (event) {
+            event.preventDefault() // Prevent the form from submitting via the browser
+
+            // Send email
+            emailjs
+              .sendForm(
+                'service_your_service_id',
+                'template_your_template_id',
+                this
+              )
+              .then(
+                function (response) {
+                  console.log('Email sent:', response)
+                  alert('Your message has been sent successfully!')
+                  document.getElementById('contactForm').reset() // Clear the form fields after successful submission
+                },
+                function (error) {
+                  console.error('Error sending email:', error)
+                  alert(
+                    'Sorry, an error occurred while sending your message. Please try again later.'
+                  )
+                }
+              )
+          })
+      </script>
+      <!--  -->
     </section>
     <!--  -->
     <div class="md:h-[20vh] h-[10vh]"></div>
@@ -453,7 +548,7 @@
         <nav>
           <img
             src="src/Obed-logo-removebg-preview.png"
-            class="inline md:h-[18vh] md:w-[13vw] w-[25vw] h-[15vh]"
+            class="inline md:h-[19vh] md:w-[10vw] w-[25vw] h-[15vh]"
             alt=""
           />
         </nav>
@@ -584,6 +679,7 @@
 </style>
 
 <script>
+  //
   function Menu(e) {
     const list = document.querySelector('ul')
 
@@ -603,32 +699,4 @@
     document.location.pathname = 'about.html'
   })
   //
-
-  const form = document.querySelector('.contact_Form')
-
-  function sendMsg(e) {
-    e.preventDefault()
-
-    const name = document.querySelector('.name').value,
-      email = document.querySelector('.email').value,
-      message = document.querySelector('.msg').value
-
-    Email.send({
-      SecureToken: '77849e42-83be-40c2-8f41-55ee6dd2904e',
-      To: 'arinzegodfrey376@gmail.com',
-      From: email,
-      Subject: 'Contact Form',
-      Body: message,
-    }).then((message) => alert(message))
-
-    Email.send({
-      SecureToken: '77849e42-83be-40c2-8f41-55ee6dd2904e',
-      Host: 'smtp.elasticemail.com', // Replace 'example.com' with your SMTP server hostname
-      Username: 'arinzegodfrey376@gmail.com',
-      Password: 'smtp.elasticemail.com',
-      // Other email options...
-    })
-  }
-
-  form.addEventListener('submit', sendMsg)
 </script>

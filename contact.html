@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <link rel="stylesheet" href="src/output.css" />
-    <link rel="stylesheet" href="submit.php" />
+    <link rel="stylesheet" href="contact.css" />
     <link
       rel="stylesheet"
       href=" https://unpkg.com/ionicons@7.1.0/dist/ionicons/svg/close.svg"
@@ -303,110 +303,7 @@
         <h4>©Copyright @ 2024 OBETECH</h4>
       </section>
     </footer>
+
+    <script src="contact.js"></script>
   </body>
 </html>
-
-<script>
-  function Menu(e) {
-    const list = document.querySelector('ul')
-
-    if (e.name === 'menu') {
-      e.name = 'close'
-      list.classList.add('opacity-100')
-      list.classList.add('top-[130px]')
-    } else {
-      e.name = 'menu'
-      list.classList.remove('opacity-100')
-      list.classList.remove('top-[130px]')
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contactForm')
-
-    form.addEventListener('submit', function (event) {
-      event.preventDefault()
-
-      // Client-side validation
-      const name = document.getElementById('name').value.trim()
-      const email = document.getElementById('email').value.trim()
-      const message = document.getElementById('message').value.trim()
-
-      if (name === '' || email === '' || message === '') {
-        alert('Please fill out all fields.')
-        return
-      }
-
-      // Submit form if validation passes
-      this.submit()
-    })
-  })
-  //
-
-  const click = document.getElementById('click')
-  click.addEventListener('click', () => {
-    document.location.pathname = 'about.html'
-  })
-</script>
-
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-  @keyframes slideInFromLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  .animate-left {
-    animation: slideInFromLeft 1s ease-out forwards;
-  }
-
-  .hover {
-    animation: turn 2.5s ease infinite;
-  }
-
-  @keyframes turn {
-    from {
-      transform: rotate(0turn);
-    }
-    to {
-      transform: rotate(1turn);
-    }
-  }
-
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  form input,
-  form textarea,
-  form button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    outline: none;
-  }
-
-  .button-butt {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-</style>
