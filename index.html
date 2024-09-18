@@ -6,6 +6,9 @@
     <title>My Portfolio</title>
     <link rel="shortcut icon" href="src/Obed-logo.jpg" />
     <link rel="stylesheet" href="src/output.css" />
+
+    <link rel="stylesheet" href="index.css" />
+
     <link
       rel="stylesheet"
       href=" https://unpkg.com/ionicons@7.1.0/dist/ionicons/svg/close.svg"
@@ -29,7 +32,7 @@
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
   </head>
-  <body class="bg-cyan-950">
+  <body id="top" class="bg-cyan-950">
     <header
       id="Home"
       class="w-[100%] h-[25vh] shadow-2xl flex items-center justify-between px-[80px]"
@@ -67,7 +70,7 @@
     </header>
     <!--  -->
     <!-- phone view -->
-    <div
+    <nav
       class="md:hidden border-b-[1px] pb-4 border-[gray] flex items-center justify-between px-[30px] absolute bottom-[15cm] w-[100%] h-[10vh]"
     >
       <div>
@@ -82,7 +85,7 @@
         <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
       </span>
       <!--  -->
-    </div>
+    </nav>
     <!--phone-view-end  -->
 
     <ul
@@ -143,11 +146,11 @@
         </h1>
         <br />
         <a href="#down" class="flex items-center gap-5">
-          <p
+          <span
             class="border-[1px] border-[#ff9d00] md:w-[3.5vw] md:h-[3.5vw] w-[12vw] h-[12vw] rounded-[50%] flex items-center justify-center"
           >
             <i class="bi bi-arrow-down"></i>
-          </p>
+          </span>
 
           <h3 class="font-serif font-semibold md:text-[3.5vh] text-[2.5vh]">
             Scroll for more
@@ -170,7 +173,7 @@
       id="about"
       class="md:w-[100%] md:h-[130vh] w-[100%] h-[100vh] flex md:items-end justify-center"
     >
-      <nav
+      <div
         id="down"
         class="md:w-[100%] md:h-[100vh] w-[100%] h-[100vh] flex flex-col gap-[9vh] md:gap-0 md:flex md:flex-row items-center justify-between px-[20px] md:px-[80px]"
       >
@@ -275,7 +278,7 @@
         </div>
 
         <!--  -->
-      </nav>
+      </div>
     </section>
     <!--  -->
     <!-- empty-div -->
@@ -287,7 +290,7 @@
     <section id="Services" class="bg-white flex flex-col gap-6">
       <div class="md:h-[12vh] h-[15vh]"></div>
 
-      <nav
+      <div
         class="flex items-center justify-center font-sans md:text-[8vh] text-[5vh] font-black pb-4"
       >
         <h1 class="text-cyan-950 flex items-center justify-center">
@@ -297,9 +300,9 @@
             >vices</span
           >
         </h1>
-      </nav>
+      </div>
       <!--  -->
-      <nav
+      <div
         class="md:flex md:flex-row flex flex-col md:gap-0 gap-[10vh] justify-between md:px-[80px] px-[20px] md:pb-[6cm] pb-[3cm]"
       >
         <div
@@ -363,7 +366,7 @@
             alt=""
           />
         </div>
-      </nav>
+      </div>
     </section>
 
     <!--  -->
@@ -373,16 +376,16 @@
       id="ContactMe"
       class="md:px-[80px] px-[18px] flex flex-col justify-between"
     >
-      <nav class="md:pb-[7vh] pb-[4vh]">
+      <div class="md:pb-[7vh] pb-[4vh]">
         <h1
           class="font-sans md:text-[10vh] text-[3em] text-start font-bold text-white"
         >
           Cont<span class="text-[#ff9d00]">act</span>
         </h1>
-      </nav>
+      </div>
       <!--  -->
 
-      <nav
+      <div
         class="flex items-center justify-center pb-[2cm] md:text-[6vh] text-[1.2rem] font-serif font-extrabold text-white"
       >
         <h1 class="text-start">
@@ -390,10 +393,10 @@
           and consultation. Let's take your <br />
           business to the next level.
         </h1>
-      </nav>
+      </div>
       <!--  -->
 
-      <nav
+      <div
         class="md:flex md:flex-row flex flex-col md:gap-4 gap-[4vh] items-center justify-center md:pb-[3cm] pb-[2.5cm]"
       >
         <ul
@@ -433,21 +436,21 @@
             <i class="bi bi-linkedin"></i>
           </a>
         </ul>
-      </nav>
+      </div>
 
-      <nav class="flex justify-center items-center">
+      <div class="flex justify-center items-center">
         <img
           src="src/contact-2400.jpg"
           class="inline md:w-[90vw] md:h-[100vh] w-[100vw] h-[50vh]"
           alt=""
         />
-      </nav>
+      </div>
       <!--  -->
       <div class="md:h-[20vh] h-[10vh]"></div>
 
       <!--  -->
-      <div class="container mx-auto py-10">
-        <div class="bg-white p-5 rounded-md shadow-md">
+      <div class="container">
+        <div>
           <h2
             class="text-2xl text-cyan-950 font-semibold text-center font-serif mb-5"
           >
@@ -498,65 +501,65 @@
           </form>
         </div>
       </div>
-
-      <!-- Email.js library -->
-      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-      <!--  -->
-      <script>
-        ;(function () {
-          emailjs.init('obedmarcel') // Replace with your Email.js user ID
-        })()
-      </script>
-      <!-- JavaScript code to handle form submission and email sending -->
-      <script>
-        document
-          .getElementById('contactForm')
-          .addEventListener('submit', function (event) {
-            event.preventDefault() // Prevent the form from submitting via the browser
-
-            // Send email
-            emailjs
-              .sendForm(
-                'service_your_service_id',
-                'template_your_template_id',
-                this
-              )
-              .then(
-                function (response) {
-                  console.log('Email sent:', response)
-                  alert('Your message has been sent successfully!')
-                  document.getElementById('contactForm').reset() // Clear the form fields after successful submission
-                },
-                function (error) {
-                  console.error('Error sending email:', error)
-                  alert(
-                    'Sorry, an error occurred while sending your message. Please try again later.'
-                  )
-                }
-              )
-          })
-      </script>
-      <!--  -->
     </section>
+
+    <!-- Email.js library -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <!--  -->
+    <script>
+      ;(function () {
+        emailjs.init('obedmarcel') // Replace with your Email.js user ID
+      })()
+    </script>
+    <!-- JavaScript code to handle form submission and email sending -->
+    <script>
+      document
+        .getElementById('contactForm')
+        .addEventListener('submit', function (event) {
+          event.preventDefault() // Prevent the form from submitting via the browser
+
+          // Send email
+          emailjs
+            .sendForm(
+              'service_your_service_id',
+              'template_your_template_id',
+              this
+            )
+            .then(
+              function (response) {
+                console.log('Email sent:', response)
+                alert('Your message has been sent successfully!')
+                document.getElementById('contactForm').reset() // Clear the form fields after successful submission
+              },
+              function (error) {
+                console.error('Error sending email:', error)
+                alert(
+                  'Sorry, an error occurred while sending your message. Please try again later.'
+                )
+              }
+            )
+        })
+    </script>
+    <!--  -->
+
     <div class="md:h-[20vh] h-[10vh]"></div>
 
     <footer class="md:w-[100%] w-[100%] bg-cyan-900 flex flex-col">
       <section
         class="md:flex md:flex-row items-center h-[32vh] flex flex-col md:justify-between md:px-[80px] md:gap-0 px-[30px] border-b-[2px] md:border-[gray] border-[white]"
       >
-        <nav>
+        <div>
           <img
             src="src/Obed-logo-removebg-preview.png"
             class="inline md:h-[19vh] md:w-[10vw] w-[25vw] h-[15vh]"
             alt=""
           />
-        </nav>
+        </div>
         <!--  -->
         <div
           class="md:flex md:flex-row flex flex-col items-center justify-center md:gap-10 gap-7"
         >
-          <nav
+          <div
             class="font-bold md:text-[2.7vh] text-[2.5vh] md:gap-4 gap-5 flex font-sans"
           >
             <a href="#Home" class="text-white hover:text-[#ff9d00]">Home</a>
@@ -567,10 +570,10 @@
             <a href="#ContactMe" class="text-white hover:text-[#ff9d00]"
               >Contact</a
             >
-          </nav>
+          </div>
           <!--  -->
 
-          <nav class="flex items-center md:gap-3 gap-5">
+          <div class="flex items-center md:gap-3 gap-5">
             <a
               href="https://www.facebook.com/obedmarcel.comedian?mibextid=ZbWKwL"
               class="hover border-[1px] bg-[#fff] md:bg-[#ff9d00] md:text-[#fff] text-[#000] rounded-[50%] w-[8vw] h-[8vw] md:w-[3vw] md:h-[3vw] flex items-center justify-center"
@@ -598,7 +601,7 @@
             >
               <i class="bi bi-linkedin"></i>
             </a>
-          </nav>
+          </div>
         </div>
         <!--  -->
       </section>
@@ -606,97 +609,26 @@
       <!--  -->
 
       <section
-        class="bg-cyan-900 text-white flex items-center justify-center w-[100%] h-[25vh] md:font-mono font-sans md:text-[3vh] text-[2.5vh] md:font-black font-medium"
+        class="bg-cyan-900 text-white md:flex md:flex-row flex flex-col h-[20vh] justify-around items-center md:justify-between md:px-9 px-4 w-[100%] md:h-[25vh] md:font-mono font-sans md:text-[3vh] text-lg md:font-black font-medium"
       >
-        <h4>©Copyright @ 2024 OBETECH</h4>
+        <h4 class="font-semibold md:text-[3vh] text-[2vh]">
+          ©Copyright @ 2024 OBETECH
+        </h4>
+        <a href="#top" class="flex items-center md:gap-5 gap-2">
+          <span
+            class="border-[1px] border-[#ff9d00] md:bg-transparent bg-black md:w-[3.5vw] md:h-[3.5vw] w-[13vw] h-[13vw] rounded-[50%] flex items-center justify-center"
+          >
+            <i class="bi bi-arrow-up"></i>
+          </span>
+
+          <h3 class="font-serif font-semibold md:text-[3.5vh] text-[1.8vh]">
+            Scroll to Top
+          </h3>
+        </a>
       </section>
     </footer>
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
-
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-  @keyframes slideInFromLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  .animate-left {
-    animation: slideInFromLeft 1s ease-out forwards;
-  }
-
-  .hover {
-    animation: turn 2.5s ease infinite;
-  }
-
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  form input,
-  form textarea,
-  form button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    outline: none;
-  }
-
-  .button-butt {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-
-  @keyframes turn {
-    from {
-      transform: rotate(0turn);
-    }
-    to {
-      transform: rotate(1turn);
-    }
-  }
-</style>
-
-<script>
-  //
-  function Menu(e) {
-    const list = document.querySelector('ul')
-
-    if (e.name === 'menu') {
-      e.name = 'close'
-      list.classList.add('opacity-100')
-      list.classList.add('top-[130px]')
-    } else {
-      e.name = 'menu'
-      list.classList.remove('opacity-100')
-      list.classList.remove('top-[130px]')
-    }
-  }
-
-  const click = document.getElementById('click')
-  click.addEventListener('click', () => {
-    document.location.pathname = 'about.html'
-  })
-  //
-</script>
