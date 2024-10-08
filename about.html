@@ -121,19 +121,23 @@
     </ul>
     <!--  -->
 
-    <main
-      class="w-[100%] md:h-[70vh] h-[60vh] bg-[white] flex-col flex items-center justify-center"
+    <section
+      class="w-[100%] md:h-[70vh] h-[60vh] bg-[white] md:gap-6 gap-0 flex-col flex items-center justify-center"
     >
       <div class="font-sans font-medium text-[3.5vh] text-[#ff9d00]">
         <b>About</b>
       </div>
       <!--  -->
       <div
-        class="font-extrabold font-sans md:text-[2.5cm] text-[1cm] text-cyan-950"
+        class="font-extrabold text-center md:leading-[5rem] leading-[3.5rem] font-sans md:text-[2.5cm] text-[1cm] text-cyan-950"
       >
         <h1 class="animate-left">Hi, I'm OBETECH</h1>
+        <span
+          id="typewriter"
+          class="text-pretty md:text-4xl text-2xl font-mono font-medium opacity-50"
+        ></span>
       </div>
-    </main>
+    </section>
     <!--  -->
 
     <div class="md:h-[20vh] h-[10vh]"></div>
@@ -178,7 +182,7 @@
       <div>
         <img
           src="src/Marcel.jpg"
-          class="inline md:w-[85vw] md:h-[150vh] w-[100vw] h-[50vh] md:rounded-none rounded-[10px]"
+          class="inline border-[4px] rounded-lg border-white md:w-[60vw] md:h-[60vw] w-[100vw] h-[50vh]"
           alt=""
         />
       </div>
@@ -357,7 +361,24 @@
       transform: rotate(1turn);
     }
   }
+
+  #typewriter::after {
+    content: '|';
+    animation: blink 0.75s infinite;
+    opacity: 1;
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
 </style>
+<!--  -->
 <!--  -->
 <script>
   function Menu(e) {
@@ -373,4 +394,22 @@
       list.classList.remove('top-[130px]')
     }
   }
+  //
+  //
+  document.addEventListener('DOMContentLoaded', function () {
+    const text = "I'm a Frontend Developer"
+    const speed = 100 // Adjust speed of typing here (milliseconds)
+    let i = 0
+    const typewriter = document.getElementById('typewriter')
+
+    function typeText() {
+      if (i < text.length) {
+        typewriter.innerHTML += text.charAt(i)
+        i++
+        setTimeout(typeText, speed)
+      }
+    }
+
+    typeText()
+  })
 </script>

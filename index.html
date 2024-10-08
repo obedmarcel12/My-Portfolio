@@ -133,17 +133,17 @@
     >
       <div class="md:flex md:flex-col text-white">
         <h2
-          class="font-medium md:text-[4vh] text-[2vh] font-sans text-gray-100 md:font-serif animate-left"
+          class="md:font-bold font-medium md:text-[4vh] text-[2vh] font-sans text-gray-100 md:font-serif animate-left"
         >
           Hello, I'm Godfrey Obed Arinze CEO of OBE<span class="text-[#ff9d00]"
             >TECH</span
           >
         </h2>
         <h1
+          id="typewriter-heading"
           class="md:font-serif md:font-black md:text-[1.2cm] text-start text-[4vh] font-serif font-extrabold animate-left"
-        >
-          I Create Websites, <br />and I'm A Frontend Developer <br />
-        </h1>
+        ></h1>
+
         <br />
         <a href="#down" class="flex items-center w-[20vw] gap-5">
           <span
@@ -632,3 +632,53 @@
     <script src="index.js"></script>
   </body>
 </html>
+
+<!--  -->
+<!-- CSS -->
+<style>
+  /* Typewriter blinking cursor */
+  #typewriter-heading::after {
+    content: '|';
+    animation: blink 0.75s infinite;
+    opacity: 1;
+    font-weight: bold;
+    color: #fff; /* Adjust this to match your design */
+    font-size: inherit;
+    margin-left: 2px;
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+</style>
+<!--  -->
+
+<!-- JavaScript -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Text for the typewriter effect
+    const text = `I Create Websites,\n and I'm A Frontend Developer`
+
+    const speed = 100 // Typing speed in milliseconds
+    let i = 0 // Counter to track current character
+    const typewriterHeading = document.getElementById('typewriter-heading')
+
+    function typeText() {
+      if (i < text.length) {
+        // Handle line breaks (\n) and regular characters
+        typewriterHeading.innerHTML +=
+          text.charAt(i) === '\n' ? '<br/>' : text.charAt(i)
+        i++
+        setTimeout(typeText, speed) // Delay before typing the next character
+      }
+    }
+
+    typeText() // Start typing effect when the page loads
+  })
+</script>
