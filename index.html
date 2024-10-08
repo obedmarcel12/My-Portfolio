@@ -283,6 +283,25 @@
     <!--  -->
     <!-- empty-div -->
     <div class="md:h-[20vh] h-[60vh]"></div>
+
+    <!-- MY-Cv -->
+    <section
+      id="resume"
+      class="flex flex-col items-center justify-center min-h-screen bg-white p-6"
+    >
+      <div class="text-center bg-slate-100 p-14 rounded-lg shadow-lg">
+        <h2 class="text-4xl font-bold text-cyan-950 mb-6">My CV</h2>
+        <p id="typeText" class="text-lg font-semibold text-slate-800 mb-9"></p>
+        <a
+          href="src/Resume Obetech.pdf"
+          download
+          class="bg-cyan-950 hover:bg-slate-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition duration-300 transform hover:scale-105"
+        >
+          Download My CV
+        </a>
+      </div>
+    </section>
+
     <!--  -->
 
     <!-- Services -->
@@ -682,3 +701,51 @@
     typeText() // Start typing effect when the page loads
   })
 </script>
+
+<!-- 2 -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Text for the typewriter effect
+    const text = `You can download my CV by clicking the button below:`
+
+    const speed = 100 // Typing speed in milliseconds
+    let i = 0 // Counter to track current character
+    const typewriterHeading = document.getElementById('typeText')
+
+    function typeText() {
+      if (i < text.length) {
+        // Handle line breaks (\n) and regular characters
+        typewriterHeading.innerHTML +=
+          text.charAt(i) === '\n' ? '<br/>' : text.charAt(i)
+        i++
+        setTimeout(typeText, speed) // Delay before typing the next character
+      }
+    }
+
+    typeText() // Start typing effect when the page loads
+  })
+</script>
+
+<!-- css 2 -->
+<style>
+  /* Typewriter blinking cursor */
+  #typeText::after {
+    content: '|';
+    animation: blink 0.75s infinite;
+    opacity: 1;
+    font-weight: bold;
+    color: rgb(4, 14, 47); /* Adjust this to match your design */
+    font-size: inherit;
+    margin-left: 2px;
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+</style>
