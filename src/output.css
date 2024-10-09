@@ -716,6 +716,18 @@ video {
   height: 7vh;
 }
 
+.h-\[15vw\] {
+  height: 15vw;
+}
+
+.h-\[7vw\] {
+  height: 7vw;
+}
+
+.h-\[17vh\] {
+  height: 17vh;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -778,6 +790,18 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[15vw\] {
+  width: 15vw;
+}
+
+.w-\[7vw\] {
+  width: 7vw;
+}
+
+.w-\[30vw\] {
+  width: 30vw;
 }
 
 .transform {
