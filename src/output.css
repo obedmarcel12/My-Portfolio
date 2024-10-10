@@ -1557,6 +1557,10 @@ video {
     flex-direction: column;
   }
 
+  .md\:items-start {
+    align-items: flex-start;
+  }
+
   .md\:items-end {
     align-items: flex-end;
   }
@@ -1603,6 +1607,10 @@ video {
 
   .md\:gap-\[10vh\] {
     gap: 10vh;
+  }
+
+  .md\:rounded-none {
+    border-radius: 0px;
   }
 
   .md\:border-\[10px\] {
