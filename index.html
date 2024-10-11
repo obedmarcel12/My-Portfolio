@@ -17,20 +17,11 @@
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </head>
   <body id="top" class="bg-cyan-950">
     <header
@@ -525,45 +516,6 @@
       </div>
     </section>
 
-    <!-- Email.js library -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <!--  -->
-    <script>
-      ;(function () {
-        emailjs.init('obedmarcel') // Replace with your Email.js user ID
-      })()
-    </script>
-    <!-- JavaScript code to handle form submission and email sending -->
-    <script>
-      document
-        .getElementById('contactForm')
-        .addEventListener('submit', function (event) {
-          event.preventDefault() // Prevent the form from submitting via the browser
-
-          // Send email
-          emailjs
-            .sendForm(
-              'service_your_service_id',
-              'template_your_template_id',
-              this
-            )
-            .then(
-              function (response) {
-                console.log('Email sent:', response)
-                alert('Your message has been sent successfully!')
-                document.getElementById('contactForm').reset() // Clear the form fields after successful submission
-              },
-              function (error) {
-                console.error('Error sending email:', error)
-                alert(
-                  'Sorry, an error occurred while sending your message. Please try again later.'
-                )
-              }
-            )
-        })
-    </script>
-    <!--  -->
-
     <div class="md:h-[20vh] h-[10vh]"></div>
 
     <footer class="md:w-[100%] w-[100%] bg-cyan-900 flex flex-col">
@@ -650,105 +602,6 @@
       </section>
     </footer>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
-
-<!--  -->
-<!-- CSS -->
-<style>
-  /* Typewriter blinking cursor */
-  #typewriter-heading::after {
-    content: '|';
-    animation: blink 0.75s infinite;
-    opacity: 1;
-    font-weight: bold;
-    color: #fff; /* Adjust this to match your design */
-    font-size: inherit;
-    margin-left: 2px;
-  }
-
-  @keyframes blink {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
-</style>
-<!--  -->
-
-<!-- JavaScript -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Text for the typewriter effect
-    const text = `I Create Websites,\n and I'm A Frontend Developer`
-
-    const speed = 100 // Typing speed in milliseconds
-    let i = 0 // Counter to track current character
-    const typewriterHeading = document.getElementById('typewriter-heading')
-
-    function typeText() {
-      if (i < text.length) {
-        // Handle line breaks (\n) and regular characters
-        typewriterHeading.innerHTML +=
-          text.charAt(i) === '\n' ? '<br/>' : text.charAt(i)
-        i++
-        setTimeout(typeText, speed) // Delay before typing the next character
-      }
-    }
-
-    typeText() // Start typing effect when the page loads
-  })
-</script>
-
-<!-- 2 -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Text for the typewriter effect
-    const text = `You can download my CV by clicking the button below:`
-
-    const speed = 100 // Typing speed in milliseconds
-    let i = 0 // Counter to track current character
-    const typewriterHeading = document.getElementById('typeText')
-
-    function typeText() {
-      if (i < text.length) {
-        // Handle line breaks (\n) and regular characters
-        typewriterHeading.innerHTML +=
-          text.charAt(i) === '\n' ? '<br/>' : text.charAt(i)
-        i++
-        setTimeout(typeText, speed) // Delay before typing the next character
-      }
-    }
-
-    typeText() // Start typing effect when the page loads
-  })
-</script>
-
-<!-- css 2 -->
-<style>
-  /* Typewriter blinking cursor */
-  #typeText::after {
-    content: '|';
-    animation: blink 0.75s infinite;
-    opacity: 1;
-    font-weight: bold;
-    color: rgb(4, 14, 47); /* Adjust this to match your design */
-    font-size: inherit;
-    margin-left: 2px;
-  }
-
-  @keyframes blink {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
-</style>

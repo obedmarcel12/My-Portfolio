@@ -21,12 +21,9 @@ html {
 }
 
 .container {
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 25px;
-  border-radius: 10px;
-  background: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+  padding: 20px;
 }
 
 h1 {
@@ -62,19 +59,19 @@ form button {
 }
 
 /* Typewriter blinking cursor */
-#typewriter-heading::after {
+#typewriter::after {
   content: '|';
-  animation: blink 0.75s ease-in-out;
+  animation: blink 0.75s step-end infinite;
   opacity: 1;
   font-weight: bold;
-  color: cyan; /* Adjust to match your design */
+  color: cadetblue; /* Adjust this to match your design */
   font-size: inherit;
   margin-left: 2px;
 }
 
 /* Class to hide the blinking cursor */
 .hideBlink::after {
-  content: none !important; /* Remove the blinking cursor */
+  content: none !important; /* Hide the cursor after typing is done */
 }
 
 @keyframes blink {
