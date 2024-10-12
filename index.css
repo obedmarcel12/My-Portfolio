@@ -86,3 +86,29 @@ form button {
     opacity: 0;
   }
 }
+
+/* 2 */
+#typeText::after {
+  content: '|';
+  animation: blink 0.75s ease-in-out;
+  opacity: 1;
+  font-weight: bold;
+  color: cornflowerblue; /* Adjust to match your design */
+  font-size: inherit;
+  margin-left: 2px;
+}
+
+/* Class to hide the blinking cursor */
+.BlinkHidden::after {
+  content: none !important; /* Remove the blinking cursor */
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

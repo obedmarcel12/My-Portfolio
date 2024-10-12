@@ -37,3 +37,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
   typeText() // Start typing effect when the page loads
 })
+
+//
+
+// Simulate typewriter effect (if you're using this approach)
+const text = 'You can download my CV by clicking the button below:'
+let index = 0
+const speed = 100 // Speed of typing
+const heading = document.getElementById('typeText')
+
+function typeWriter() {
+  if (index < text.length) {
+    heading.textContent += text.charAt(index)
+    index++
+    setTimeout(typeWriter, speed)
+  } else {
+    // Once typing finishes, hide the blinking cursor
+    heading.classList.add('BlinkHidden')
+  }
+}
+
+// Start the typing animation
+typeWriter()
