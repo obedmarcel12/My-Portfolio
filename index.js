@@ -1,5 +1,5 @@
 function Menu(e) {
-  const list = document.querySelector('ul')
+  const list = document.getElementById('HamburgerMenu')
 
   if (e.name === 'menu') {
     e.name = 'close'
