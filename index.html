@@ -136,17 +136,32 @@
         ></h1>
 
         <br />
-        <a href="#down" class="flex items-center gap-5">
-          <span
-            class="border-[1px] md:text-[3vh] text-[1.9vh] border-cyan-400 md:w-[3.5vw] md:h-[3.5vw] w-[11vw] h-[11vw] rounded-[50%] flex items-center justify-center"
-          >
-            <i class="bi bi-arrow-down"></i>
-          </span>
+        <div class="flex md:flex-row flex-col md:gap-10 gap-5">
+          <a href="#down" class="flex items-center gap-5">
+            <span
+              class="border-[1px] md:text-[3vh] text-[1.9vh] border-cyan-400 md:w-[3.5vw] md:h-[3.5vw] w-[11vw] h-[11vw] rounded-[50%] flex items-center justify-center"
+            >
+              <i class="bi bi-arrow-down"></i>
+            </span>
 
-          <h3 class="font-serif font-semibold md:text-[3.5vh] text-[2.5vh]">
-            Scroll for more
-          </h3>
-        </a>
+            <h3 class="font-serif font-semibold md:text-[3.5vh] text-[2.5vh]">
+              Scroll for more
+            </h3>
+          </a>
+          <!--  -->
+
+          <div class="flex items-center justify-center">
+            <a
+              href="src/Resume Obetech.pdf"
+              download
+              class="bg-white text-cyan-900 md:w-[14vw] w-[14rem] md:h-[7vh] h-[8vh] font-semibold flex items-center justify-center rounded-full shadow-md"
+            >
+              Download My CV
+            </a>
+          </div>
+        </div>
+
+        <!--  -->
       </div>
       <!--  -->
       <div class="md:border-[10px] border-[7px] border-white rounded-[10px]">
@@ -274,26 +289,6 @@
     <!--  -->
     <!-- empty-div -->
     <div class="md:h-[20vh] h-[60vh]"></div>
-
-    <!-- MY-Cv -->
-    <section
-      id="resume"
-      class="flex flex-col items-center justify-center drop-shadow-xl md:min-h-screen min-h-[70vh] bg-white p-6"
-    >
-      <div class="text-center bg-slate-100 p-14 rounded-lg shadow-lg">
-        <h2 class="text-4xl font-bold text-cyan-950 mb-6">My CV</h2>
-        <p id="typeText" class="text-lg font-semibold text-slate-800 mb-9"></p>
-        <a
-          href="src/Resume Obetech.pdf"
-          download
-          class="bg-cyan-950 hover:bg-slate-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition duration-300 transform hover:scale-105"
-        >
-          Download My CV
-        </a>
-      </div>
-    </section>
-
-    <!--  -->
 
     <!-- Services -->
     <section id="Services" class="bg-white flex flex-col gap-10">
