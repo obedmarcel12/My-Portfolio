@@ -1151,6 +1151,10 @@ video {
   line-height: 1.75rem;
 }
 
+.text-\[1\.5vh\] {
+  font-size: 1.5vh;
+}
+
 .font-black {
   font-weight: 900;
 }
