@@ -1,17 +1,3 @@
-function Menu(e) {
-  const list = document.getElementById('HamburgerMenu')
-
-  if (e.name === 'menu') {
-    e.name = 'close'
-    list.classList.add('opacity-100')
-    list.classList.add('top-[130px]')
-  } else {
-    e.name = 'menu'
-    list.classList.remove('opacity-100')
-    list.classList.remove('top-[130px]')
-  }
-}
-
 document.addEventListener('DOMContentLoaded', function () {
   // Text for the typewriter effect
   const text = `I Create Websites,\n and I'm A Frontend Developer`
