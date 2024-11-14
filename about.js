@@ -4,18 +4,18 @@ function Menu(e) {
   if (e.name === 'menu') {
     e.name = 'close'
     list.classList.add('opacity-100')
-    list.classList.add('top-[130px]')
+    list.classList.add('top-[100px]')
   } else {
     e.name = 'menu'
     list.classList.remove('opacity-100')
-    list.classList.remove('top-[130px]')
+    list.classList.remove('top-[100px]')
   }
 }
 //
 //
 document.addEventListener('DOMContentLoaded', function () {
   const text = "I'm a Frontend Developer"
-  const speed = 100 // Adjust speed of typing here (milliseconds)
+  const speed = 70 // Adjust speed of typing here (milliseconds)
   let i = 0
   const typewriter = document.getElementById('typewriter')
 

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Text for the typewriter effect
   const text = `I Create Websites,\n and I'm A Frontend Developer`
 
-  const speed = 100 // Typing speed in milliseconds
+  const speed = 40 // Typing speed in milliseconds
   let i = 0 // Counter to track current character
   const typewriterHeading = document.getElementById('typewriter-heading')
 

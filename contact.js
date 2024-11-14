@@ -4,11 +4,11 @@ function Menu(e) {
   if (e.name === 'menu') {
     e.name = 'close'
     list.classList.add('opacity-100')
-    list.classList.add('top-[130px]')
+    list.classList.add('top-[100px]')
   } else {
     e.name = 'menu'
     list.classList.remove('opacity-100')
-    list.classList.remove('top-[130px]')
+    list.classList.remove('top-[100px]')
   }
 }
 
