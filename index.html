@@ -474,7 +474,6 @@
         />
       </div> -->
 
-      <!--  -->
       <div class="container bg-gray-50">
         <div>
           <h2
@@ -482,48 +481,46 @@
           >
             Contact Us
           </h2>
-          <form id="contactForm" class="space-y-4 pb-6 text-cyan-950">
-            <div>
-              <label for="name" class="block font-serif text-2xl">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="form-input w-full border-[1px] border-[gray]"
-                required
-              />
-            </div>
-            <div>
-              <label for="email" class="block font-serif text-2xl">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="form-input w-full border-[1px] border-[gray]"
-                required
-              />
-            </div>
-            <div>
-              <label for="message" class="block font-serif text-2xl"
-                >Message</label
-              >
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                class="form-textarea w-full border-[1px] border-[gray]"
-                required
-              ></textarea>
-            </div>
-            <!--  -->
-            <div class="w-full pt-6 flex items-end">
-              <button
-                type="submit"
-                class="bg-cyan-950 text-white px-4 rounded-md hover:bg-blue-600"
-              >
-                Send Message
-              </button>
-            </div>
+          <form
+            id="contactForm"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="35ccfb1e-9901-4a82-8593-b564590c5f2c"
+            />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+
+            <!-- Honeypot Spam Protection -->
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+            />
+
+            <button class="button-butt" type="submit">Send Message</button>
           </form>
         </div>
       </div>
